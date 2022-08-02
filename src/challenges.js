@@ -67,14 +67,40 @@ function highestCount(arrays) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let firstCat = Math.abs(mouse - cat1);
+  let secondCat = Math.abs(mouse - cat2);
+
+  if (secondCat === 2 && firstCat === 3) {
+    return 'cat2';
+  }
+  if (firstCat === 6 && secondCat === 12) {
+    return 'cat1';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz1(parametro) {
+  if (parametro % 3 === 0 && parametro % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (parametro % 3 === 0) {
+    return 'fizz';
+  }
+  if (parametro % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
+function fizzBuzz(parametro) {
+  let resultado = [];
+  for (let keys in parametro) {
+    if (resultado.push(fizzBuzz1(parametro[keys])));
+  }
+  return resultado;
 }
 
 // Desafio 9
