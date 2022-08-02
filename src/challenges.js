@@ -37,15 +37,33 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   if (wins === 14 && ties === 8) {
     return 50;
-  } if (wins === 1 && ties === 2) {
+  }
+  if (wins === 1 && ties === 2) {
     return 5;
   }
   return 0;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount1(array) {
+  let posicao = array[0];
+  for (let keys in array) {
+    if (array[keys] > posicao) {
+      posicao = array[keys];
+    }
+  }
+  return posicao;
+}
+
+function highestCount(arrays) {
+  let contador = 0;
+  for (let keys in arrays) {
+    if (highestCount1(arrays) === arrays[keys]) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
@@ -54,6 +72,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
+
 function fizzBuzz() {
   // seu código aqui
 }
